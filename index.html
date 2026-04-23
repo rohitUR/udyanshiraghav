@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes MJPRU | Premium Study Material</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+        
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        .page { display: none; }
+        .active-page { display: block; }
+        
+        .premium-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .premium-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1), 0 10px 10px -5px rgba(59, 130, 246, 0.04);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #1e40af, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .shimmer {
+            background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 50%, #3b82f6 100%);
+            background-size: 200% auto;
+            animation: shimmer 2s linear infinite;
+        }
+        @keyframes shimmer { to { background-position: 200% center; } }
+    </style>
+</head>
+<body class="bg-[#F8FAFC]">
+
+    <div class="bg-blue-600 text-white py-2 px-4 text-center text-sm font-bold shimmer">
+        🔥 Limited Time Offer: Get 20% OFF on all Engineering Notes! Use Code: MJPRU20
+    </div>
+
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2 cursor-pointer group" onclick="showPage('home')">
+                <div class="bg-blue-600 text-white p-2 rounded-xl group-hover:rotate-12 transition-transform">
+                    <i data-lucide="graduation-cap"></i>
+                </div>
+                <span class="text-xl font-extrabold tracking-tight text-slate-900">Notes MJPRU</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 items-center">
+                <button onclick="showPage('home')" class="nav-btn font-semibold text-slate-600 hover:text-blue-600 transition">Home</button>
+                <button onclick="showPage('notes')" class="nav-btn font-semibold text-slate-600 hover:text-blue-600 transition">Notes</button>
+                <button onclick="showPage('about')" class="nav-btn font-semibold text-slate-600 hover:text-blue-600 transition">About</button>
+                <button onclick="showPage('contact')" class="bg-blue-600 text-white px-6 py-2.5 rounded-full font-bold hover:bg-blue-700 hover:shadow-lg transition flex items-center gap-2">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i> Support
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="home" class="page active-page animate__animated animate__fadeIn">
+        <section class="container mx-auto px-6 py-20 flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-xs font-bold mb-6">
+                    <span class="flex h-2 w-2 rounded-full bg-blue-600 animate-ping"></span>
+                    JOIN 5000+ MJPRU STUDENTS
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-extrabold text-slate-900 leading-tight mb-6">
+                    Score Better with <br><span class="gradient-text">Premium Notes</span>
+                </h1>
+                <p class="text-lg text-slate-600 mb-10 max-w-lg leading-relaxed">
+                    Don't waste time searching for content. Get curated, topper-verified notes designed specifically for your MJPRU exams.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                    <button onclick="showPage('notes')" class="bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-blue-700 hover:-translate-y-1 transition-all shadow-xl shadow-blue-200">
+                        Start Browsing
+                    </button>
+                    <div class="flex items-center gap-3 bg-white border border-slate-200 px-6 py-4 rounded-2xl">
+                        <i data-lucide="check-circle" class="text-green-500"></i>
+                        <span class="font-bold text-slate-700">Instant Download</span>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2 mt-12 lg:mt-0">
+                <img src="https://img.freepik.com/free-vector/hand-drawn-essay-illustration_23-2150290515.jpg" alt="Study" class="rounded-3xl animate__animated animate__pulse animate__infinite animate__slow">
+            </div>
+        </section>
+
+        <section class="bg-white py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-12 italic text-slate-500">"Notes MJPRU helped me clear my backlogs in just 2 weeks!"</h2>
+                <div class="flex justify-center items-center gap-4">
+                    <div class="bg-slate-200 h-12 w-12 rounded-full"></div>
+                    <div class="text-left">
+                        <p class="font-bold">Arun Pratap Singh</p>
+                        <p class="text-sm text-slate-500">B.Tech Chemical Engineering</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <main id="notes" class="page container mx-auto px-6 py-16 animate__animated animate__fadeIn">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-extrabold mb-4">Choose Your Department</h2>
+            <p class="text-slate-500">High-quality PDFs with exam-oriented content.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="premium-card bg-white rounded-3xl border border-slate-100 p-2 overflow-hidden relative">
+                <div class="absolute top-4 right-4 z-10">
+                    <span class="bg-orange-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase shadow-lg">Best Seller</span>
+                </div>
+                <div class="h-56 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl flex items-center justify-center">
+                    <i data-lucide="file-text" class="w-16 h-16 text-blue-300"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-1 text-slate-900">Engineering Physics</h3>
+                    <p class="text-slate-500 text-sm mb-6 leading-relaxed">Includes Unit 1-5, PYQs, and Toppers Short Tricks.</p>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-slate-400 line-through text-sm">₹199</span>
+                            <p class="text-2xl font-black text-blue-600">₹99</p>
+                        </div>
+                        <button onclick="handlePayment('Engineering Physics')" class="bg-blue-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition active:scale-95">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="premium-card bg-white rounded-3xl border border-slate-100 p-2">
+                <div class="h-56 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl flex items-center justify-center">
+                    <i data-lucide="flask-conical" class="w-16 h-16 text-green-300"></i>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-1 text-slate-900">UG - Organic Chem</h3>
+                    <p class="text-slate-500 text-sm mb-6 leading-relaxed">B.Sc 1st Year detailed handwritten clean notes.</p>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-slate-400 line-through text-sm">₹99</span>
+                            <p class="text-2xl font-black text-blue-600">₹49</p>
+                        </div>
+                        <button onclick="handlePayment('B.Sc Physics')" class="bg-blue-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition active:scale-95">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <main id="contact" class="page container mx-auto px-6 py-20 text-center animate__animated animate__fadeIn">
+        <h2 class="text-4xl font-extrabold mb-10">We're here to help</h2>
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+            <a href="https://wa.me/YOUR_NUMBER" class="p-8 bg-green-50 rounded-3xl border-2 border-transparent hover:border-green-200 transition group">
+                <i data-lucide="phone" class="mx-auto mb-4 text-green-600 group-hover:scale-110 transition"></i>
+                <h4 class="font-bold text-xl text-green-900">WhatsApp Support</h4>
+                <p class="text-green-700 text-sm mt-2">Get instant reply for payment issues.</p>
+            </a>
+            <div class="p-8 bg-blue-50 rounded-3xl border-2 border-transparent">
+                <i data-lucide="shield-check" class="mx-auto mb-4 text-blue-600"></i>
+                <h4 class="font-bold text-xl text-blue-900">Secure Checkout</h4>
+                <p class="text-blue-700 text-sm mt-2">SSL Encrypted Razorpay/UPI gateway.</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="paymentOverlay" class="fixed inset-0 bg-slate-900/90 z-[100] hidden flex items-center justify-center p-6 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl p-10 max-w-sm w-full text-center animate__animated animate__zoomIn">
+            <div class="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="lock" class="w-10 h-10"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-2">Secure Payment</h3>
+            <p id="paymentNote" class="text-slate-500 mb-8 font-medium italic"></p>
+            <div class="space-y-4">
+                <button onclick="confirmPayment()" class="w-full bg-blue-600 text-white py-4 rounded-2xl font-bold shadow-lg shadow-blue-200">
+                    Pay via UPI / Card
+                </button>
+                <button onclick="closePayment()" class="text-slate-400 font-bold text-sm">Go Back</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="successMessage" class="fixed bottom-10 left-1/2 -translate-x-1/2 bg-slate-900 text-white px-8 py-4 rounded-full font-bold shadow-2xl hidden animate__animated animate__bounceInUp">
+        🎉 Payment Success! Download will be available soon.
+    </div>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active-page'));
+            document.getElementById(pageId).classList.add('active-page');
+            window.scrollTo(0,0);
+        }
+
+        function handlePayment(noteName) {
+            document.getElementById('paymentNote').innerText = "Unlocking: " + noteName;
+            document.getElementById('paymentOverlay').classList.remove('hidden');
+        }
+
+        function closePayment() {
+            document.getElementById('paymentOverlay').classList.add('hidden');
+        }
+
+        function confirmPayment() {
+            closePayment();
+            const msg = document.getElementById('successMessage');
+            msg.classList.remove('hidden');
+            setTimeout(() => { msg.classList.add('hidden'); }, 5000);
+        }
+    </script>
+</body>
+</html>
